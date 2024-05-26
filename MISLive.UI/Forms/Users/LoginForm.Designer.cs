@@ -243,6 +243,7 @@
             this.tablePanel1.SetRow(this.cboCompanies, 2);
             this.cboCompanies.Size = new System.Drawing.Size(312, 22);
             this.cboCompanies.TabIndex = 2;
+            this.cboCompanies.Visible = false;
             // 
             // lblCompaniesList
             // 
@@ -257,6 +258,7 @@
             this.lblCompaniesList.Size = new System.Drawing.Size(68, 18);
             this.lblCompaniesList.TabIndex = 8;
             this.lblCompaniesList.Text = "Company";
+            this.lblCompaniesList.Visible = false;
             // 
             // txtPassword
             // 
@@ -301,8 +303,10 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(698, 460);
             this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.lnkAbout);
