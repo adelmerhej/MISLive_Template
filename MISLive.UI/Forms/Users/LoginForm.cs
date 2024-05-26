@@ -25,7 +25,7 @@ namespace MISLive.UI.Forms.Users
         private void InitData()
         {
             _userModel = _userRepository.SelectUser(Settings.Default.UserId);
-
+ 
         }
         private void WireUpData()
         {
