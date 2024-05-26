@@ -7,6 +7,7 @@ using DevExpress.LookAndFeel;
 using DevExpress.Utils.Taskbar;
 using DevExpress.XtraEditors;
 using MISLive.UI.Forms.Main;
+using MISLive.UI.Forms.Users;
 using MISLive.UI.Properties;
 
 namespace MISLive.UI
@@ -45,7 +46,15 @@ namespace MISLive.UI
                 //HelperApplication.InitDefaultStyle();
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                
+
+                using (LoginForm usr = new LoginForm())
+                {
+                    if (usr.ShowDialog() == DialogResult.No)
+                    {
+                        Application.Exit();
+                        return;
+                    }
+                }
                 Application.Run(new MainForms());
             }
             else
